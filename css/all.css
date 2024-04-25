@@ -1,0 +1,546 @@
+/* 錨點點擊後的滾動效果 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 48px;
+  color: #A8C400;
+  font-weight: 700;
+  line-height: 72px;
+  display: block;
+  width: 264px;
+}
+
+h4 {
+  font-size: 20px;
+  color: #A8C400;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 28px;
+  color: #A8C400;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+
+
+/* 首頁版心效果 */
+
+.wrapper {
+  margin: 0 auto;
+  width: 1152px;
+}
+
+/* header區塊 */
+
+.header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+
+.logo {
+  margin-right: 183px;
+}
+
+.logo a {
+  background: url(../img/logo.png);
+  background-size: 100% auto;
+  width: 186px;
+  height: 48px;
+  display: block;
+}
+
+.navigation {
+  display: flex;
+  height: 44px;
+  align-items: center;
+
+}
+
+.button {
+  background-color: #D1FA31;
+  width: 128px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 30px;
+  margin-right: 16px;
+}
+
+.button img {
+  vertical-align: sub;
+}
+
+.button p {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 44px;
+}
+
+.navigation ul {
+  display: flex;
+  width: 328px;
+  height: 28px;
+  justify-content: space-between;
+
+}
+
+.navigation ul li a {
+  display: block;
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.navigation ul li a:hover {
+  color: #A8C400
+}
+
+.socialLinks ul {
+  margin-left: 183px;
+  width: 128px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* container區塊 */
+/* section00 */
+
+.section00 {
+  width: 1152px;
+  height: 640px;
+  background-color: #C6C6C6;
+  border-radius: 15px;
+  padding: 0 36.5px;
+  position: relative;
+}
+
+.section00>p {
+  font-size: 260px;
+  font-weight: 700;
+  line-height: 320px;
+  color: #FFFFFF;
+}
+
+.section00 .voteNumber {
+  display: flex;
+  width: 672px;
+  height: 88px;
+  background-color: black;
+  border-radius: 50px;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  margin-top: -44px;
+  padding: 12px 32px;
+  justify-content: space-between;
+}
+
+.section00 .voteNumber p {
+  color: #D1FA31;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.cat {
+  position: absolute;
+  bottom: -20px;
+  right: -15px;
+
+}
+
+/* section01 */
+.section01 {
+  margin-top: 64px;
+  display: flex;
+}
+
+.mr32 {
+  margin-right: 32px;
+}
+
+.section01 .intro p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* section02 */
+.section02 {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.activity img {
+  margin-right: 16px;
+}
+
+.activity h5 {
+  margin-bottom: 8px;
+}
+
+.p16 {
+  width: 576px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  /* 刪減號 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.activityFooter {
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  margin-top: 8px;
+
+}
+
+.activityFooter .readmore {
+  display: flex;
+  width: 128px;
+  height: 44px;
+  background-color: #D1FA31;
+  border-radius: 22px;
+  padding: 8px 16px;
+}
+
+.activityFooter .readmore a {
+  display: inline-block;
+  width: 64px;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.activityFooter .readmore img {
+  margin-left: 8px;
+  margin-right: 0px;
+  width: 24px;
+  height: 24px;
+}
+
+.activityFooter span {
+  color: #A8C400;
+  line-height: 44px;
+}
+
+
+
+
+/* section03 */
+.section03 {
+  margin-top: 32px;
+}
+
+.section03 h5 {
+  padding: 32px 324px;
+}
+
+.policeTabTitle {
+  margin-top: 32px;
+  display: flex;
+}
+
+.policeTabTitle .tab {
+  width: 384px;
+  height: 62px;
+  background-color: #BBE217;
+  border-radius: 15px 15px 0px 0px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 62px;
+}
+
+.policeTabTitle .tabActive {
+  background-color: #FBFFE1;
+}
+
+.tab:hover {
+  background-color: #D1FA31;
+}
+
+.tab-content {
+  background-color: #FBFFE1;
+  height: 452px;
+}
+
+.content {
+  display: none;
+}
+
+.tab-content .tabContentActive {
+  display: block;
+}
+
+.policeBox {
+  display: flex;
+}
+
+.policeCard img {
+  width: 128px;
+  height: 128px;
+  display: block;
+  margin: 0 96px;
+}
+
+.policeCard {
+  width: 320px;
+  height: 268px;
+  margin: 0px 32px;
+  text-align: center;
+  background: url("../img/Background.png") no-repeat center;
+}
+
+.policeCard h6 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 42px;
+  margin: 8px 48px;
+}
+
+.policeCard p {
+  margin: 0 16px;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+
+
+
+/* section03結束 */
+/* section04 */
+
+.section04 {
+  display: flex;
+  margin-top: 64px;
+}
+
+.section04left,
+.section05left {
+  width: 461px;
+  height: 612px;
+  margin-right: 32px;
+}
+
+.subtitle {
+  height: 84px;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 700;
+  margin-top: 32px;
+}
+
+.donation {
+  background-color: black;
+  height: 138px;
+  border-radius: 15px;
+  color: #D1FA31;
+  padding: 16px 32px;
+  margin-top: 256px;
+}
+
+.donation span {
+  font-style: 20px;
+  line-height: 30px;
+}
+
+.donation p {
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+}
+
+.section04right {
+  width: 659px;
+  height: 612px;
+}
+
+.section04Card {
+  display: flex;
+  width: 659px;
+  height: 141px;
+  border: #A8C400 solid 2px;
+  border-radius: 15px;
+  padding: 0 32px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section04Card .title {
+  margin: 19.5px 0px;
+}
+
+.section04Card .title>p {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 700;
+}
+
+.section04Card .title>p span {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #8C8C8C;
+}
+
+.section04Card:hover {
+  background-color: black;
+  color: #A8C400;
+}
+
+
+.sponsors {
+  width: 161px;
+  height: 44px;
+  border-radius: 10px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #EEFFA9;
+  margin-top: 16px;
+}
+
+
+/* section05 */
+.section05 {
+  display: flex;
+  height: 646px;
+  margin-top: 64px;
+}
+
+.section05leftBackground {
+  background: url("../img/Black-02.png") no-repeat 270px 311px;
+}
+
+.section05left .text {
+  line-height: 28px;
+  color: #444444;
+}
+
+.section05right {
+  width: 659px;
+  height: 646px;
+  background-color: #FBFFE1;
+  border-radius: 15px;
+  padding: 32px;
+}
+
+.input {
+  height: 92px;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+
+input,
+textarea {
+  margin-top: 8px;
+  width: 595px;
+  height: 56px;
+  border: #E2E2E2 2px solid;
+  border-radius: 10px;
+}
+
+textarea {
+  height: 112px;
+  resize: none;
+}
+
+button {
+  width: 595px;
+  height: 62px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 48px;
+  background-color: #D1FA31;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+
+
+
+
+/* footer */
+
+.footer {
+  height: 280px;
+  margin-top: 64px;
+  background-color: black;
+  padding: 32px 64px;
+}
+
+.footerWrap {
+  height: 168px;
+  justify-content: space-between;
+}
+
+.footerWrap img {
+  width: 165px;
+  height: 64px;
+}
+
+.flex {
+  display: flex;
+}
+
+.right {
+  width: 363px;
+  height: 168px;
+  justify-content: space-between;
+}
+
+.right span {
+  color: #D1FA31;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.right ul {
+  margin-top: 16px;
+}
+
+.right ul li,
+.right ul a {
+  color: white;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.right ul li span img {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+
+
+.copyright {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  margin-top: 24px;
+}
