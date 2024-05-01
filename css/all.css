@@ -1,3 +1,11 @@
+/* rwd reset */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
 /* 錨點點擊後的滾動效果 */
 html {
   scroll-behavior: smooth;
@@ -37,15 +45,18 @@ h5 {
 
 /* 首頁版心效果 */
 
-.wrapper {
+.wrap {
   margin: 0 auto;
-  width: 1152px;
+  max-width: 1152px;
 }
+
+
 
 /* header區塊 */
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   height: 80px;
   align-items: center;
   position: sticky;
@@ -67,9 +78,9 @@ h5 {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   height: 44px;
   align-items: center;
-
 }
 
 .button {
@@ -119,16 +130,23 @@ h5 {
   justify-content: space-between;
 }
 
+@media(max-width:450px) {}
+
+
 /* container區塊 */
+/* mobile版本時除了header, section00,footer, 其他區塊都要內縮16px */
+
+
 /* section00 */
 
 .section00 {
-  width: 1152px;
-  height: 640px;
+  width: 100%;
+  /* height: 640px; */
   background-color: #C6C6C6;
   border-radius: 15px;
   padding: 0 36.5px;
   position: relative;
+  margin-bottom: 64px;
 }
 
 .section00>p {
@@ -141,7 +159,6 @@ h5 {
 .section00 .voteNumber {
   display: flex;
   width: 672px;
-  height: 88px;
   background-color: black;
   border-radius: 50px;
   position: absolute;
@@ -165,14 +182,62 @@ h5 {
 
 }
 
+@media(max-width:450px) {
+  .section00 {
+    margin-top: 343px;
+  }
+
+  .section00>p {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 120px;
+    color: #FFFFFF;
+  }
+
+  .section00 .voteNumber {
+    width: 100%;
+    left: 0px;
+    padding: 4px 16px;
+    margin-top: -21px;
+  }
+
+  .section00 .voteNumber p {
+    color: #D1FA31;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  .section00 .voteNumber img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cat {
+    width: 100%;
+    position: absolute;
+    top: -385px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
 /* section01 */
 .section01 {
+  max-width: 100%;
   margin-top: 64px;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 16px;
 }
 
 .mr32 {
-  margin-right: 32px;
+  width: 23%;
+}
+
+.intro {
+  width: 75%;
 }
 
 .section01 .intro p {
@@ -180,15 +245,28 @@ h5 {
   line-height: 30px;
 }
 
+@media(max-width:450px) {
+  .mr32 {
+    width: 100%;
+  }
+
+  .intro {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
 /* section02 */
 .section02 {
-  margin-top: 64px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin: 64px 16px 0 16px;
 }
 
 .activity {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 32px;
 }
 
@@ -197,6 +275,7 @@ h5 {
 }
 
 .activity h5 {
+
   margin-bottom: 8px;
 }
 
@@ -247,6 +326,20 @@ h5 {
   line-height: 44px;
 }
 
+@media(max-width:450px) {
+
+  .activity img {
+    width: 343px;
+    margin: 16px 0;
+  }
+
+  .p16 {
+    max-width: 343px;
+  }
+
+
+}
+
 
 
 
@@ -256,7 +349,8 @@ h5 {
 }
 
 .section03 h5 {
-  padding: 32px 324px;
+  text-align: center;
+  padding: 32px 0px 48px 0px;
 }
 
 .policeTabTitle {
@@ -266,7 +360,6 @@ h5 {
 
 .policeTabTitle .tab {
   width: 384px;
-  height: 62px;
   background-color: #BBE217;
   border-radius: 15px 15px 0px 0px;
   text-align: center;
@@ -284,7 +377,7 @@ h5 {
 
 .tab-content {
   background-color: #FBFFE1;
-  height: 452px;
+  padding-bottom: 32px;
 }
 
 .content {
@@ -297,6 +390,7 @@ h5 {
 
 .policeBox {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .policeCard img {
@@ -308,7 +402,6 @@ h5 {
 
 .policeCard {
   width: 320px;
-  height: 268px;
   margin: 0px 32px;
   text-align: center;
   background: url("../img/Background.png") no-repeat center;
@@ -327,6 +420,19 @@ h5 {
   line-height: 28px;
 }
 
+@media(max-width:450px) {
+  .section03 h5 {
+    padding: 32px 0px 48px 0px;
+  }
+
+  .policeTabTitle .tab {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 16px 7px;
+    width: 33.33%;
+  }
+}
+
 
 
 
@@ -335,14 +441,14 @@ h5 {
 
 .section04 {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 64px;
 }
 
 .section04left,
 .section05left {
   width: 461px;
-  height: 612px;
-  margin-right: 32px;
 }
 
 .subtitle {
@@ -359,7 +465,7 @@ h5 {
   border-radius: 15px;
   color: #D1FA31;
   padding: 16px 32px;
-  margin-top: 256px;
+  margin-top: 225px;
 }
 
 .donation span {
@@ -375,12 +481,12 @@ h5 {
 
 .section04right {
   width: 659px;
-  height: 612px;
+  /* height: 612px; */
 }
 
 .section04Card {
   display: flex;
-  width: 659px;
+  width: 100%;
   height: 141px;
   border: #A8C400 solid 2px;
   border-radius: 15px;
@@ -422,6 +528,12 @@ h5 {
   margin-top: 16px;
 }
 
+@media(max-width:450px) {
+  .section04right {
+    margin-top: 32px;
+  }
+}
+
 
 /* section05 */
 .section05 {
@@ -429,6 +541,12 @@ h5 {
   height: 646px;
   margin-top: 64px;
 }
+
+.section05left {
+  width: 461px;
+  margin-right: 32px;
+}
+
 
 .section05leftBackground {
   background: url("../img/Black-02.png") no-repeat 270px 311px;
